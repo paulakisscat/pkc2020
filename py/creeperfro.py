@@ -4,12 +4,18 @@ import requests
 
 res = requests.get('https://localprod.pandateacher.com/python-manuscript/crawler-html/spider-men4.0.html')
 
-webcontent = res.text
+html = res.text
 
-websources = open('websourcescon.txt', 'a+')
+print('响应状态码',res.status_code)
 
-websources.write(webcontent)
+print(html)
 
-websources.close()
+htmlcontent = open('websourcescon.txt', 'a+')
+
+htmlcontent.write(html)
+
+htmlcontent.close()
+
+
 
 

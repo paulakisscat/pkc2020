@@ -8,7 +8,6 @@ res = requests.get('https://localprod.pandateacher.com/python-manuscript/crawler
 
 # 解析
 #
-
 # 提取
 html = res.text
 

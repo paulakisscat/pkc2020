@@ -24,17 +24,17 @@ import requests
 # photo.close()
 
 
-res = requests.get('https://localprod.pandateacher.com/python-manuscript/crawler-html/sanguo.md')
-
-res.encoding='utf-8'
-
-novel = res.text
-
-三国演义 = open('pani.txt','a+')
-
-三国演义.write(novel)
-
-三国演义.close()
+# res = requests.get('https://localprod.pandateacher.com/python-manuscript/crawler-html/sanguo.md')
+#
+# res.encoding='utf-8'
+#
+# novel = res.text
+#
+# 三国演义 = open('pani.txt','a+')
+#
+# 三国演义.write(novel)
+#
+# 三国演义.close()
 
 
 

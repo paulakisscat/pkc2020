@@ -24,3 +24,18 @@ for tags_books in items:
 
     # 输出星级
     print(tags_star['class'][1])
+
+# 爬取博客【人人都是蜘蛛侠】首页四篇文章
+# 标题、发布时间、文章链接
+res = requests.get('https://wordpress-edu-3autumn.localprod.oc.forchange.cn/')
+# print(res.status_code)
+bs = BeautifulSoup(res.text, 'html.parser')
+
+tags_article = bs.findAll('header', class_='entry-header')
+# print(tags_article)
+for tag_article in tags_article:
+    article_time = tag_article.find(class_='entry-date published').text
+    article_link = tag_article.find(class_='entry-title').find(rel='bookmark')['href']
+    article_name = tag_article.find(class_='entry-title').text
+    
+    print(article_name+'发布于'+article_time+'\t'+article_link)

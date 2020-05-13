@@ -37,5 +37,16 @@ import requests
 # 三国演义.close()
 
 
+res = requests.get('https://static.pandateacher.com/Over%20The%20Rainbow.mp3')
+resmusic = res.content
+
+music = open('dl.mp3', 'wb')
+
+music.write(resmusic)
+
+music.close()
+
+
+
 
 
